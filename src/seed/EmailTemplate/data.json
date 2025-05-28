@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Email Test",
+    "locale": "en",
+    "type": "TEST_EMAIL",
+    "subject": "Email test from {{appName}}",
+    "body": "test_email_en.html"
+  },
+  {
+    "name": "Email Kiểm Tra",
+    "locale": "vi",
+    "type": "TEST_EMAIL",
+    "subject": "Email kiểm tra từ hệ thống {{appName}}",
+    "body": "test_email_vi.html"
+  },
+  {
+    "name": "Verification Code",
+    "locale": "vi",
+    "type": "VERIFICATION_CODE",
+    "subject": "{{code}} Mã xác nhận từ {{appName}}",
+    "body": "verification_code_vi.html"
+  },
+  {
+    "name": "Verification Code",
+    "locale": "en",
+    "type": "VERIFICATION_CODE",
+    "subject": "{{code}} Verification code from {{appName}}",
+    "body": "verification_code_en.html"
+  },
+  {
+    "name": "Kích Hoạt Tài Khoản",
+    "locale": "vi",
+    "type": "ACCOUNT_ACTIVATION",
+    "subject": "Chào mừng bạn đến với {{appName}}!",
+    "body": "account_activation_vi.html"
+  },
+  {
+    "name": "Account Activation",
+    "locale": "en",
+    "type": "ACCOUNT_ACTIVATION",
+    "subject": "Welcome to {{appName}}!",
+    "body": "account_activation_en.html"
+  },
+  {
+    "name": "Welcome",
+    "locale": "vi",
+    "type": "WELCOME",
+    "subject": "Tài khoản {{appName}} của bạn đã kích hoạt thành công!",
+    "body": "welcome_vi.html"
+  },
+  {
+    "name": "Welcome",
+    "locale": "en",
+    "type": "WELCOME",
+    "subject": "Your {{appName}} account has been successfully activated!",
+    "body": "welcome_en.html"
+  },
+  {
+    "name": "Thông báo có Doanh nghiệp mới cho Admin",
+    "locale": "vi",
+    "type": "ADMIN_NEW_ORGANIZATION",
+    "subject": "Người dùng {{userName}} đã tạo Doanh nghiệp mới - {{organizationName}}",
+    "body": "admin_new_organization_vi.html"
+  },
+  {
+    "name": "New Organization Notification for Admin",
+    "locale": "en",
+    "type": "ADMIN_NEW_ORGANIZATION",
+    "subject": "User {{userName}} has created a new Organization - {{organizationName}}",
+    "body": "admin_new_organization_en.html"
+  },
+  {
+    "name": "Thông báo có Doanh nghiệp mới cho User",
+    "locale": "vi",
+    "type": "USER_NEW_ORGANIZATION",
+    "subject": "Doanh nghiệp {{organizationName}} đã được tạo thành công!",
+    "body": "user_new_organization_vi.html"
+  },
+  {
+    "name": "New Organization Notification for User",
+    "locale": "en",
+    "type": "USER_NEW_ORGANIZATION",
+    "subject": "Organization {{organizationName}} has been successfully created!",
+    "body": "user_new_organization_en.html"
+  }
+]

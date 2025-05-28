@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply h-full;
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    @apply hidden;
+  }
+}
+
+.date-picker {
+  .react-datepicker-wrapper {
+    @apply w-full;
+  }
+  .react-datepicker__navigation {
+    @apply pt-3;
+  }
+  .react-datepicker__header {
+    @apply h-16 bg-gray-50;
+  }
+  .react-datepicker__header--time {
+    @apply h-16;
+  }
+
+  .react-datepicker__month-container {
+    .react-datepicker-year-header {
+      @apply h-10;
+    }
+    .react-datepicker__month-text {
+      @apply py-3 #{!important};
+    }
+    .react-datepicker__day,
+    .react-datepicker__month-text {
+      @apply rounded #{!important};
+    }
+    .react-datepicker__day--today,
+    .react-datepicker__month-text--today {
+      @apply bg-blue-100 hover:bg-blue-300 #{!important};
+    }
+    .react-datepicker__day--selected,
+    .react-datepicker__month-text--selected {
+      @apply bg-blue-300 text-gray-900 hover:bg-blue-400 #{!important};
+    }
+    .react-datepicker__day--keyboard-selected,
+    .react-datepicker__month-text--keyboard-selected {
+      @apply hover:bg-blue-300 #{!important};
+    }
+  }
+}

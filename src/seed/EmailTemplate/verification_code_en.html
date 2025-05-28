@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{subject}}</title>
+    <style type="text/css">
+      /* Wrapper */
+      body,
+      .tms-main {
+        background-color: #eff6ff;
+        font-family: ui-sans-serif, system-ui, Roboto, Helvetica, Arial, sans-serif;
+        color: #111827;
+        margin: 0;
+        padding: 0;
+      }
+      .tms-container {
+        margin: auto;
+        width: 90%;
+      }
+
+      /* Header */
+      .tms-header-container {
+        background: #ffffff;
+        border-bottom: #0070e0 4px solid;
+        padding: 30px 20px 20px 20px;
+      }
+      .tms-header {
+        margin: auto;
+        max-width: 600px;
+      }
+      .tms-logo img,
+      .tms-logo .tms-logo-img {
+        width: 68px;
+        max-width: 100%;
+        height: 34px;
+        font-family: ui-sans-serif, system-ui, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 40px;
+        color: #0070e0;
+        border: 0;
+      }
+
+      /* Content */
+      .tms-content {
+        background-color: #ffffff;
+        border: 1px solid #f3f4f6;
+        border-radius: 8px;
+        margin: auto;
+        max-width: 600px;
+      }
+      .tms-content h3 {
+        font-family: ui-sans-serif, system-ui, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+      }
+      .tms-content p {
+        font-family: ui-sans-serif, system-ui, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .tms-content p.bold {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+      }
+      .tms-content p.bold-base {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+      }
+      .tms-content p.bold-lg {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: bold;
+      }
+      .tms-content p.code {
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 40px;
+        color: #0070e0;
+      }
+      .tms-content p.note {
+        font-style: italic;
+        font-size: 14px;
+        line-height: 20px;
+        color: #636363;
+      }
+
+      /* Footer */
+      .tms-footer {
+        margin: auto;
+        max-width: 600px;
+        width: 90%;
+      }
+      .tms-footer p {
+        font-family: ui-sans-serif, system-ui, Roboto, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        color: #9ca3af;
+        margin: 0;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body style="font-family: ui-sans-serif, system-ui, Roboto, Helvetica, Arial, sans-serif; background-color: #eff6ff; color: #111827; margin: 0; padding: 0">
+    <table cellpadding="0" cellspacing="0" width="100%" class="tms-main" style="width: 100%; background-color: #eff6ff">
+      <tbody>
+        <tr>
+          <td style="padding: 0 0 20px 0">
+            <!-- Header -->
+            <table cellpadding="0" cellspacing="0" width="100%" style="width: 100%; background-color: #ffffff">
+              <tbody>
+                <tr>
+                  <td align="center" class="tms-header-container" style="padding: 30px 20px 20px 20px; border-bottom: #0070e0 4px solid">
+                    <table cellpadding="0" cellspacing="0" width="90%" class="tms-header tms-container" style="width: 90%; max-width: 600px">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="tms-logo">
+                              <img class="tms-logo-img" src="{{logoUrl}}" alt="{{appName}}" />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Content -->
+            <table cellpadding="0" cellspacing="0" width="100%" style="width: 100%">
+              <tbody>
+                <tr>
+                  <td align="center" style="padding: 20px 0">
+                    <table cellpadding="0" cellspacing="0" width="90%" class="tms-content tms-container" style="width: 90%; max-width: 600px; background-color: #ffffff">
+                      <tbody>
+                        <tr>
+                          <td style="padding: 20px">
+                            <h3>Account Verification</h3>
+                            <p>This email contains a verification code sent from the <span style="font-weight: bold">{{appName}}</span> system to confirm your identity.</p>
+                            <p class="bold-base">Verification Code:</p>
+                            <p class="code">{{code}}</p>
+                            <p>The verification code was requested <span style="font-weight: bold">{{requestedAt}}</span> and will be valid for <span style="font-weight: bold">{{minutes}} minutes</span>.</p>
+                            <p class="note"><span style="font-weight: bold">Note:</span> To ensure the security of your account, please do not share this verification code with anyone else.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- Footer -->
+            <table cellpadding="0" cellspacing="0" width="100%" style="width: 100%">
+              <tbody>
+                <tr>
+                  <td align="center">
+                    <table cellpadding="0" cellspacing="0" width="90%" class="tms-footer" style="width: 90%; max-width: 600px">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <p>
+                              This email is automatically generated by the {{appName}}. Please DO NOT REPLY.<br />&copy; 2023 Green Space Solution. All rights reserved. BS9, Diamond Riverside, 1646A Vo Van Kiet Street, Ward 16, District 8,
+                              Ho Chi Minh City, Vietnam.
+                            </p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

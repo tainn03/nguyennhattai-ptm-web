@@ -1,0 +1,936 @@
+[
+  {
+    "type": "UNIT_OF_MEASURE",
+    "data": {
+      "type": "CUBIC_METER",
+      "code": "m³",
+      "name": "Mét khối",
+      "description": "Đơn vị đo lường Cubic Meter (m³) là một đơn vị tiêu chuẩn trong hệ thống đo lường quốc tế. Nó thường được sử dụng để đo lường khối lượng của một không gian ba chiều, có áp dụng rộng rãi trong lĩnh vực vận tải và logistics. Một mét khối tương đương với kích thước một mét theo cả ba chiều.",
+      "isSystem": true
+    }
+  },
+  {
+    "type": "UNIT_OF_MEASURE",
+    "data": {
+      "type": "KILOGRAM",
+      "code": "Kg",
+      "name": "Kilogram",
+      "description": "Kilogram là đơn vị tiêu chuẩn được sử dụng để đo lường trọng lượng của các đơn hàng và container. Khi một đơn vị hoặc container được gửi đi, trọng lượng của chúng được xác định trong Kilogram để đảm bảo tính chính xác và tương đồng trên toàn cầu.",
+      "isSystem": true
+    }
+  },
+  {
+    "type": "UNIT_OF_MEASURE",
+    "data": {
+      "type": "TON",
+      "code": "Tấn",
+      "name": "Tấn",
+      "description": "Tấn là một đơn vị chở phổ biến được sử dụng để đo lượng khối lượng của hàng hoá hoặc tải trọng của phương tiện vận tải. Một tấn tương đương với 2.20462 pounds (khoảng 1.01605 kilogram). Sử dụng tấn làm đơn vị chở thường áp dụng cho việc tính toán và theo dõi trọng lượng của hàng hoá, đặc biệt trong vận tải hàng hóa nặng.",
+      "isSystem": true
+    }
+  },
+  {
+    "type": "UNIT_OF_MEASURE",
+    "data": {
+      "type": "PALLET",
+      "code": "PL",
+      "name": "Pallet",
+      "description": "Pallet là một đơn vị chở phổ biến trong vận tải và logistics, thường được sử dụng để đo lượng hàng hoá dựa trên số lượng pallets. Một pallet là một nền gỗ hoặc vật liệu khác dùng để đóng gói và vận chuyển hàng hoá. Sử dụng pallets làm đơn vị chở có thể giúp đo lượng hàng hoá dễ dàng hơn, đặc biệt khi có nhiều sản phẩm cùng vận chuyển và cần thống nhất quy trình xếp dỡ và lưu trữ.",
+      "isSystem": true
+    }
+  },
+  {
+    "type": "UNIT_OF_MEASURE",
+    "data": {
+      "code": "Chuyến",
+      "name": "Chuyến",
+      "description": "Chuyến đi là một đơn vị chở thường được sử dụng trong lĩnh vực vận tải để đo lượng hàng hoá hoặc khách hàng được chở trong một lần vận chuyển duy nhất. Một chuyến thường bao gồm tất cả các địa điểm xuất phát, điểm giao hàng, và tất cả các hoạt động vận chuyển liên quan. Sử dụng chuyến làm đơn vị chở có thể giúp theo dõi và quản lý một cuộc vận chuyển từ điểm A đến điểm B, bao gồm việc lập kế hoạch, giao hàng, và ghi lại dữ liệu liên quan trong một đơn vị thống nhất."
+    }
+  },
+  {
+    "type": "TRAILER_TYPE",
+    "data": {
+      "name": "Rơ moóc chuyên dụng (Special trailer)",
+      "description": "Rơ moóc chuyên dụng, hoặc Special Trailer, là một loại rơ moóc được tạo ra để phục vụ các mục đích vận chuyển đặc biệt. Chúng có thiết kế và trang bị độc đáo để đáp ứng nhu cầu vận chuyển hàng hóa đặc biệt như hàng quá khổ, hàng siêu trường, thiết bị nặng, hoặc hàng hóa nhạy cảm."
+    }
+  },
+  {
+    "type": "TRAILER_TYPE",
+    "data": {
+      "name": "Sơ mi rơ moóc xương",
+      "description": "Sơ mi rơ moóc xương (hay còn gọi tắt là mooc xương) là loại sơ mi rơ mooc có thiết kế các khung xương đan vào nhau, chuyên dụng để chở container. Sơ mi rơ mooc xương thường chở 2 container 20 ft hoặc 1 container 40 ft."
+    }
+  },
+  {
+    "type": "TRAILER_TYPE",
+    "data": {
+      "name": "Sơ mi rơ moóc sàn",
+      "description": "Mooc sàn hay Sơ mi rơ mooc sàn là loại sơ mi rơ mooc có mặt sàn phẳng, không có thành hay mái che, vừa chở được container, vừa chở được hàng rời. Các loại hàng rời thông dụng mà sơ mi rơ mooc sàn (mooc sàn) thường chở là thép ống, thép thanh, thép cuộn, giấy cuộn và các loại vật liệu nặng khác."
+    }
+  },
+  {
+    "type": "TRAILER_TYPE",
+    "data": {
+      "name": "Sơ mi rơ moóc thùng",
+      "description": "Sơ mi rơ mooc thùng (hay còn gọi là Mooc Thùng hoặc Mooc Lồng hoặc Mooc Rào) là loại Sơ mi rơ mooc được thiết kế sàn phẳng dạng thùng nhưng có thêm phần mui để bảo vệ hàng hóa tránh tác động của thời tiết. Sơ mi rơ mooc thùng chuyên dùng để chở hàng hóa như động vật nuôi, nước ngọt, nông sản, cây cảnh,... với tải trọng lớn."
+    }
+  },
+  {
+    "type": "TRAILER_TYPE",
+    "data": {
+      "name": "Sơ mi rơ moóc cổ cò",
+      "description": "Sơ mi rơ moóc cổ cò là loại sơ mi rơ mooc có thiết kế khung xương, chuyên chở container lạnh."
+    }
+  },
+  {
+    "type": "TRAILER_TYPE",
+    "data": {
+      "name": "Sơ mi rơ moóc ben",
+      "description": "Sơ mi rơ moóc ben (còn gọi là sơ mi rơ moóc tự đổ) là loại xe chuyên dụng được thiết kế để chở và tự đổ hàng hóa, chủ yếu là vật liệu xây dựng, đất, đá và các loại rác thải công nghiệp. Chúng có cấu trúc đặc biệt, bao gồm một cabin lái, khung chassi, hệ thống treo, hệ thống ben và các thiết bị phụ trợ khác."
+    }
+  },
+  {
+    "type": "VEHICLE_TYPE",
+    "data": {
+      "name": "Xe đầu kéo",
+      "description": "Xe đầu kéo là một loại phương tiện cơ động được sử dụng để kéo hoặc nắn kéo các loại rơ moóc và hàng hóa khác. Chúng thường có một cabin cho tài xế và một đầu kéo được thiết kế để nối vào các loại rơ moóc khác nhau như rơ moóc chở hàng, chở dầu, hoặc rơ moóc tải."
+    }
+  },
+  {
+    "type": "VEHICLE_TYPE",
+    "data": {
+      "name": "Xe tải thùng",
+      "description": "Xe tải thùng là một loại phương tiện cơ động được thiết kế để vận chuyển hàng hóa. Nó bao gồm một cabin để chở tài xế và một khoang chứa hàng hóa được bao bọc bằng thùng chất liệu sắt, nhựa hoặc gỗ. Xe tải thùng đa dạng về kích thước và tải trọng, có khả năng vận chuyển nhiều loại hàng hóa từ thực phẩm đông lạnh đến thiết bị công nghiệp."
+    }
+  },
+  {
+    "type": "VEHICLE_TYPE",
+    "data": {
+      "name": "Xe tải đông lạnh",
+      "description": "Xe tải đông lạnh, còn được gọi là xe tải lạnh, là một loại xe tải đặc biệt được trang bị hệ thống lạnh để duy trì nhiệt độ thấp bên trong thùng xe. Loại xe này thường được sử dụng để vận chuyển hàng hóa nhạy cảm về nhiệt độ như thực phẩm đông lạnh, dược phẩm hoặc các sản phẩm cần được bảo quản ở điều kiện lạnh tốt. Hệ thống lạnh của xe tải này có khả năng duy trì nhiệt độ ổn định và kiểm soát nhiệt độ nội thùng xe để đảm bảo hàng hóa được giao đến đích trong tình trạng tốt nhất."
+    }
+  },
+  {
+    "type": "VEHICLE_TYPE",
+    "data": {
+      "name": "Xe tải bảo ôn",
+      "description": "Tương tự như xe tải đông lạnh, tuy nhiên chỉ có lớp vỏ thùng bằng vật liệu bảo ôn chứ không có thiết bị làm lạnh gắn theo thùng xe. Vì vậy chỉ để vận chuyển cho hàng có yêu cầu bảo quản nhiệt độ ở mức đơn giản, quãng đường vận chuyển có bảo quản nhiệt độ không quá xa."
+    }
+  },
+  {
+    "type": "VEHICLE_TYPE",
+    "data": {
+      "name": "Xe tải thùng tôn",
+      "description": "Xe tải thùng tôn là loại phương tiện vận tải được thiết kế với thùng chở bằng tôn hoặc kim loại kháng mọi điều kiện thời tiết và bảo vệ hàng hóa khỏi các yếu tố bên ngoài. Thùng tôn có khả năng chịu tải lớn, cho phép vận chuyển hàng hóa nặng, cồng kềnh hoặc nhạy cảm."
+    }
+  },
+  {
+    "type": "VEHICLE_TYPE",
+    "data": {
+      "name": "Xe tải thùng bạt",
+      "description": "Xe tải thùng bạt là một loại phương tiện vận tải được thiết kế với thùng chở bằng vải bạt, giúp bảo vệ hàng hóa khỏi ánh nắng mặt trời, mưa, bụi bẩn, và các yếu tố thời tiết khác. Thùng bạt có khả năng linh hoạt và dễ dàng điều chỉnh kích thước, cho phép vận chuyển hàng hóa có kích thước và trọng lượng khác nhau."
+    }
+  },
+  {
+    "type": "VEHICLE_TYPE",
+    "data": {
+      "name": "Xe tải thùng lửng",
+      "description": "Xe tải thùng lửng là một loại phương tiện vận chuyển hàng hóa được thiết kế với một thùng chở hàng mà hai bên của thùng không có tấm đáy cố định, tạo ra một không gian \"lửng\" cao khoảng 50cm so với sàn xe. Chuyên dùng chở các loại hàng cồng kềnh, đơn giản và thuận tiện trong việc rút - dỡ hàng hóa."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "B2",
+      "description": "Điều khiển xe ôtô 4 - 9 chỗ, ôtô chuyên dùng có trọng tải thiết kế dưới 3,5 tấn.\nCác loại xe quy định cho giấy phép lái xe hạng B1."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "C",
+      "description": "Điều khiển xe ôtô 4 - 9 chỗ, ôtô tải kể cả ôtô tải chuyên dùng và ôtô chuyên dùng có trọng tải thiết kế từ 3.500kg trở lên.\nMáy kéo kéo một rơ moóc có trọng tải thiết kế từ 3.500 kg trở lên.\nCác loại xe quy định cho giấy phép lái xe hạng B1, B2."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "D",
+      "description": "Điều khiển xe ôtô chở người từ 10 - 30 chỗ, kể cả chỗ của người lái xe.\nCác loại xe quy định cho giấy phép lái xe hạng B1, B2, C."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "E",
+      "description": "Điều khiển xe ôtô chở người trên 30 chỗ.\nCác loại xe quy định cho giấy phép lái xe hạng B1, B2, C, D. Người có giấy phép lái xe các hạng B1, B2, C, D và E khi điều khiển các loại xe tương ứng được kéo thêm một rơ moóc có trọng tải thiết kế không quá 750 kg."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "FB2",
+      "description": "Điều khiển xe theo quy định hạng B2 kéo theo rơ moóc có trọng tải thiết kế lớn hơn 750 kg, sơ mi rơ moóc, ôtô khách nối toa."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "FC",
+      "description": "Điều khiển xe theo quy định hạng C kéo theo rơ moóc có trọng tải thiết kế lớn hơn 750 kg, sơ mi rơ moóc, ôtô khách nối toa."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "FD",
+      "description": "Điều khiển xe theo quy định hạng D kéo theo rơ moóc có trọng tải thiết kế lớn hơn 750 kg, sơ mi rơ moóc, ôtô khách nối toa."
+    }
+  },
+  {
+    "type": "DRIVER_LICENSE_TYPE",
+    "data": {
+      "name": "FE",
+      "description": "Điều khiển xe theo quy định hạng E kéo theo rơ moóc có trọng tải thiết kế lớn hơn 750 kg, sơ mi rơ moóc, ôtô khách nối toa."
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "NEW",
+      "name": "Chuyến mới",
+      "isRequired": true,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": false,
+      "displayOrder": 1,
+      "isSystem": true,
+      "description": "Chuyến mới được tạo từ quản lý, quản lý điều xe hoặc khách hàng.",
+      "reportDetails": []
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "PENDING_CONFIRMATION",
+      "name": "Đang chờ tài xế xác nhận",
+      "isRequired": true,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": false,
+      "displayOrder": 2,
+      "isSystem": true,
+      "description": "Đã gửi thông báo chuyến hàng cho tài xế và đang chờ tài xế xác nhận.",
+      "reportDetails": []
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "CONFIRMED",
+      "name": "Tài xế đã xác nhận",
+      "isRequired": true,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": false,
+      "displayOrder": 3,
+      "isSystem": true,
+      "description": "Tài xế đã nhận được thông tin về chuyến hàng",
+      "reportDetails": []
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "WAITING_FOR_PICKUP",
+      "name": "Bắt đầu đến nơi nhận hàng",
+      "isRequired": true,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": false,
+      "displayOrder": 4,
+      "isSystem": true,
+      "description": "Tài xế đã bắt đầu xử lý đơn hàng và đang di chuyển đến nơi nhận hàng.",
+      "reportDetails": []
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": null,
+      "name": "Đã đến nơi nhận hàng",
+      "isRequired": false,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": true,
+      "displayOrder": 5,
+      "isSystem": false,
+      "description": "Tài xế đã đến nơi nhận hàng và đang chuẩn bị chất hàng lên xe.",
+      "reportDetails": [
+        {
+          "name": "Kiểm tra địa chỉ và thông tin liên hệ",
+          "description": "Đảm bảo rằng tài xế đang ở đúng địa điểm nhận hàng và có thông tin liên hệ của người gửi hàng trong trường hợp cần liên lạc.",
+          "displayOrder": 1
+        },
+        {
+          "name": "Kiểm tra trạng thái hàng hóa",
+          "description": "Kiểm tra danh sách hàng hóa cần nhận và so sánh với đơn đặt hàng. Đảm bảo rằng tất cả các mặt hàng được nhận đúng loại và số lượng.\nKiểm tra tình trạng của hàng hóa, xem xét xem có bất kỳ dấu vết hỏng hóc hoặc hỏng hóc nào không. Nếu có bất kỳ vấn đề nào, cần lưu ý và ghi chú lại.",
+          "displayOrder": 2
+        },
+        {
+          "name": "Ký nhận hàng",
+          "description": "Sau khi nhận hàng, tài xế cần ký nhận hoặc ghi chú trạng thái hàng hóa trong văn bản liên quan để ghi lại bằng chứng về tình trạng ban đầu của hàng hóa.",
+          "displayOrder": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": null,
+      "name": "Lên hàng xong",
+      "isRequired": true,
+      "photoRequired": true,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": true,
+      "displayOrder": 6,
+      "isSystem": false,
+      "description": "Đã chất hàng lên xe và chuẩn bị di chuyển đến nơi giao hàng.",
+      "reportDetails": [
+        {
+          "name": "Chụp hình hóa đơn chứng từ nhận hàng",
+          "description": "Chụp hình hóa đơn chứng từ nhận hàng, hình ảnh này sẽ được sử dụng làm bằng chứng cho quá trình nhận hàng.",
+          "displayOrder": 1
+        },
+        {
+          "name": "Kiểm tra trạng thái và số lượng hàng hóa",
+          "description": "Kiểm tra trạng thái và số lượng hàng hóa, xem đã đúng với hóa đơn/chứng từ nhận hàng hay chưa.",
+          "displayOrder": 2
+        }
+      ]
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "WAITING_FOR_DELIVERY",
+      "name": "Bắt đầu đến nơi giao hàng",
+      "isRequired": false,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": true,
+      "displayOrder": 7,
+      "isSystem": true,
+      "description": "Đã nhận hàng và đang bắt đầu di chuyển đến nơi giao hàng.",
+      "reportDetails": []
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": null,
+      "name": "Đã đến nơi giao hàng",
+      "isRequired": false,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": true,
+      "displayOrder": 8,
+      "isSystem": false,
+      "description": "Tài xế đã đến nơi giao hàng và đang chuẩn bị xuống hàng.",
+      "reportDetails": [
+        {
+          "name": "Xác định đúng địa điểm",
+          "description": "Đảm bảo rằng tài xế đã đến đúng địa điểm giao hàng như được chỉ định trong lịch trình.",
+          "displayOrder": 1
+        },
+        {
+          "name": "Thực hiện quy trình giao hàng",
+          "description": "Kiểm tra tình trạng của hàng hóa trên xe bao gồm: Số lượng hàng, Danh sách hàng hóa, và xác nhận tình trạng của hàng hóa và đảm bảo rằng chúng vẫn nằm trong tình trạng tốt và không hỏng hóc.",
+          "displayOrder": 2
+        }
+      ]
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "DELIVERED",
+      "name": "Đã giao hàng",
+      "isRequired": true,
+      "photoRequired": true,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": true,
+      "displayOrder": 9,
+      "isSystem": true,
+      "description": "Đã giao hàng thành công, chụp hình hóa đơn chứng từ nhận hàng để hoàn thành chuyến hàng.",
+      "reportDetails": [
+        {
+          "name": "Chụp hình hóa đơn chứng từ",
+          "description": "Chụp hình hóa đơn chứng từ giao hàng, hình ảnh này sẽ được sử dụng làm bằng chứng cho quá trình giao hàng và để hoàn thành chuyến hàng.",
+          "displayOrder": 1
+        },
+        {
+          "name": "Lưu trữ hóa đơn chứng từ",
+          "description": "Lưu trữ hóa đơn chứng từ và hình ảnh kèm theo một cách an toàn. Thông tin này được sử dụng cho mục đích kế toán, quản lý và kiểm tra hoặc tra soát trong tương lai.",
+          "displayOrder": 2
+        }
+      ]
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "COMPLETED",
+      "name": "Đã hoàn thành",
+      "isRequired": true,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": false,
+      "displayOrder": 10,
+      "isSystem": true,
+      "description": "Chuyến hàng đã hoàn thành, đã bổ sung đầy đủ thông tin chứng từ.",
+      "reportDetails": []
+    }
+  },
+  {
+    "type": "DRIVER_REPORT",
+    "data": {
+      "type": "CANCELED",
+      "name": "Đã hủy",
+      "isRequired": true,
+      "photoRequired": false,
+      "billOfLadingRequired": false,
+      "isDisplayedOnApp": false,
+      "displayOrder": 11,
+      "isSystem": true,
+      "description": "Chuyến hàng đã bị hủy",
+      "reportDetails": []
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Hàng container",
+      "description": "Đây là các mặt hàng được đóng gói trong các container tiêu chuẩn để vận chuyển. Chúng thường đa dạng về loại hình và quy mô, từ hàng hóa tiêu dùng cho đến nguyên liệu sản xuất."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Hàng lạnh",
+      "description": "Hàng lạnh bao gồm thực phẩm, sản phẩm đông lạnh, và các loại hàng hóa đòi hỏi điều kiện nhiệt độ thấp hoặc đông lạnh để bảo quản."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Hàng siêu trường siêu trọng",
+      "description": "Còn có tên gọi khác là hàng quá khổ quá tải. Đây là các loại hàng hóa có kích thước lớn hoặc trọng lượng nặng, chẳng hạn như máy móc công nghiệp hoặc phương tiện giao thông."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Thủy hải sản tươi sống",
+      "description": "Bao gồm các sản phẩm biển như tôm, cá, mực, và hải sản tươi sống đòi hỏi sự quan tâm đặc biệt để bảo quản tươi ngon và an toàn."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Hàng hóa dễ vỡ",
+      "description": "Hàng hóa dễ vỡ bao gồm các sản phẩm dễ bể, nứt, hoặc hỏng khi bị va đập hoặc chuyển động. Đây có thể là gương, thủy tinh, hoặc các sản phẩm y tế."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Hàng nguyên xe",
+      "description": "Hàng hóa này thường là các phương tiện giao thông như ô tô, xe máy, hoặc xe đạp được vận chuyển nguyên vẹn từ nơi sản xuất đến nơi sử dụng."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Hàng dễ hư hỏng",
+      "description": "Bao gồm các sản phẩm có khả năng hỏng hoặc bị hủy hoại nhanh chóng khi không được vận chuyển đúng cách, chẳng hạn như hoa tươi."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Rau, củ, quả, nông sản",
+      "description": "Hàng hóa này là các sản phẩm nông sản và thực phẩm nông nghiệp, bao gồm rau củ quả, lúa gạo, và các sản phẩm nông sản khác."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Các loại hóa chất",
+      "description": "Bao gồm hóa chất công nghiệp, dược phẩm, và các sản phẩm hóa học khác. Chúng đòi hỏi quy trình vận chuyển an toàn và đảm bảo tuân thủ quy định về bảo mật."
+    }
+  },
+  {
+    "type": "MERCHANDISE_TYPE",
+    "data": {
+      "name": "Hàng hóa ưu đãi",
+      "description": "Đây là các sản phẩm khuyến mãi, hàng hóa dành cho chương trình khuyến mãi hoặc giảm giá, thường có thời hạn đối với việc vận chuyển và giao hàng."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "VEHICLE",
+      "name": "Hệ thống động cơ",
+      "description": "Bao gồm việc kiểm tra và thay thế các bộ phận quan trọng như lọc nhiên liệu, lọc dầu, lọc gió, dây đai dẫn động, dây đai cam và hệ thống làm mát như nước làm mát."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "VEHICLE",
+      "name": "Hệ thống lái",
+      "description": "Kiểm tra áp suất lốp xe thường xuyên để đảm bảo an toàn khi lái xe. Lốp phải được bơm đúng áp suất và không có lỗ hoặc rách."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "VEHICLE",
+      "name": "Hệ thống phanh",
+      "description": "Bao gồm kiểm tra đĩa phanh, má phanh, trống phanh, cấp dầu phanh và kiểm tra guốc phanh."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "VEHICLE",
+      "name": "Hệ thống điện",
+      "description": "Bảo dưỡng hệ thống điện bao gồm kiểm tra ắc quy để đảm bảo khả năng khởi động xe và kiểm tra các bộ phận như bugi."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "VEHICLE",
+      "name": "Hệ thống truyền lực",
+      "description": "Bảo dưỡng các bộ phận truyền lực như dầu hộp số thường, hộp số vi sai và hộp số tự động để đảm bảo là xe di chuyển mượt mà và hiệu quả."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "VEHICLE",
+      "name": "Hệ thống đèn và chiếu sáng",
+      "description": "Kiểm tra tất cả đèn, bóng đèn, đèn hậu, đèn pha, đèn gạt mưa và đảm bảo chúng hoạt động bình thường."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "VEHICLE",
+      "name": "Hệ thống cần gạt",
+      "description": "Bảo trì hệ thống cần gạt bao gồm kiểm tra cần gạt rửa kính và cần gạt mưa. Đảm bảo chúng làm việc tốt giúp duy trì tầm nhìn rõ ràng trong mọi điều kiện thời tiết."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Kiểm tra khung sườn, kết cấu",
+      "description": "Điều này bao gồm kiểm tra và đánh giá chất lượng kết cấu của rơ mooc, như khung sườn và nắp. Nếu có sự hỏng hóc hoặc hỏng hóc, cần thực hiện sửa chữa hoặc thay thế."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Hệ thống phanh",
+      "description": "Kiểm tra hệ thống phanh, bao gồm đĩa phanh, má phanh, trống phanh, dầu phanh và guốc phanh."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Hệ thống treo và lái",
+      "description": "Bảo trì các bộ phận treo và lái như giảm xóc, lá càng, và bạc đạn để đảm bảo sự ổn định và hiệu suất khi di chuyển."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Hệ thống điện",
+      "description": "Kiểm tra hệ thống điện, bao gồm đèn, dây điện, ắc quy, và điều khiển điện tử, để đảm bảo rằng tất cả hoạt động đúng cách."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Hệ thống lốp",
+      "description": "Bảo dưỡng và kiểm tra lốp xe thường xuyên để đảm bảo chúng đủ áp suất và không bị hỏng hóc. Lốp có vai trò quan trọng đối với an toàn và hiệu suất của rơ mooc."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Hệ thống dẫn động",
+      "description": "Kiểm tra và bảo dưỡng hệ thống truyền động như bạc đạn, cần cẩu, và trục dẫn động."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Hệ thống làm mát",
+      "description": "Bảo trì hệ thống làm mát để đảm bảo răng cua và cần cẩu không bị nóng quá mức và gây hỏng hóc."
+    }
+  },
+  {
+    "type": "MAINTENANCE_TYPE",
+    "data": {
+      "type": "TRAILER",
+      "name": "Hệ thống thủy lực",
+      "description": "Kiểm tra và bảo dưỡng hệ thống thủy lực nếu rơ mooc được trang bị hệ thống này."
+    }
+  },
+  {
+    "type": "ORGANIZATION_ROLE",
+    "data": {
+      "type": "ADMIN",
+      "name": "Quản trị viên",
+      "description": "Vai trò quản trị có quyền cao nhất trong hệ thống, có thể thực hiện mọi hoạt động quản lý và kiểm soát toàn bộ tài nguyên và thông tin của doanh nghiệp.",
+      "permissions": []
+    }
+  },
+  {
+    "type": "ORGANIZATION_ROLE",
+    "data": {
+      "type": "MANAGER",
+      "name": "Quản lý",
+      "description": "Vai trò quản lý có trách nhiệm giám sát và điều phối các hoạt động trong doanh nghiệp. Có khả năng quản lý nhóm công việc và thực hiện các nhiệm vụ quan trọng.",
+      "permissions": [
+        { "resource": "order", "action": "find" },
+        { "resource": "order", "action": "new" },
+        { "resource": "order", "action": "detail" },
+        { "resource": "order", "action": "edit" },
+        { "resource": "order", "action": "edit-own" },
+        { "resource": "order", "action": "delete" },
+        { "resource": "order", "action": "delete-own" },
+        { "resource": "order-trip", "action": "find" },
+        { "resource": "order-trip", "action": "new" },
+        { "resource": "order-trip", "action": "detail" },
+        { "resource": "order-trip", "action": "edit" },
+        { "resource": "order-trip", "action": "edit-own" },
+        { "resource": "order-trip", "action": "delete" },
+        { "resource": "order-trip", "action": "delete-own" },
+        { "resource": "order-trip-message", "action": "find" },
+        { "resource": "order-trip-message", "action": "edit" },
+        { "resource": "order-trip-message", "action": "edit-own" },
+        { "resource": "order-trip-message", "action": "delete" },
+        { "resource": "order-trip-message", "action": "delete-own" },
+        { "resource": "order-plan", "action": "find" },
+        { "resource": "order-monitoring", "action": "find" },
+        { "resource": "vehicle-monitoring", "action": "find" },
+        { "resource": "report-statistics-customer", "action": "find" },
+        { "resource": "report-statistics-customer", "action": "detail" },
+        { "resource": "report-statistics-customer", "action": "export" },
+        { "resource": "report-statistics-subcontractor", "action": "find" },
+        { "resource": "report-statistics-subcontractor", "action": "detail" },
+        { "resource": "report-statistics-subcontractor", "action": "edit" },
+        { "resource": "report-statistics-subcontractor", "action": "export" },
+        { "resource": "report-statistics-driver", "action": "find" },
+        { "resource": "report-statistics-driver", "action": "detail" },
+        { "resource": "report-statistics-driver", "action": "edit" },
+        { "resource": "report-statistics-driver", "action": "export" },
+        { "resource": "customer", "action": "find" },
+        { "resource": "customer", "action": "new" },
+        { "resource": "customer", "action": "detail" },
+        { "resource": "customer", "action": "edit" },
+        { "resource": "customer", "action": "edit-own" },
+        { "resource": "customer", "action": "delete" },
+        { "resource": "customer", "action": "delete-own" },
+        { "resource": "customer-route", "action": "find" },
+        { "resource": "customer-route", "action": "new" },
+        { "resource": "customer-route", "action": "detail" },
+        { "resource": "customer-route", "action": "edit" },
+        { "resource": "customer-route", "action": "edit-own" },
+        { "resource": "customer-route", "action": "delete" },
+        { "resource": "customer-route", "action": "delete-own" },
+        { "resource": "subcontractor", "action": "find" },
+        { "resource": "subcontractor", "action": "new" },
+        { "resource": "subcontractor", "action": "detail" },
+        { "resource": "subcontractor", "action": "edit" },
+        { "resource": "subcontractor", "action": "edit-own" },
+        { "resource": "subcontractor", "action": "delete" },
+        { "resource": "subcontractor", "action": "delete-own" },
+        { "resource": "vehicle", "action": "find" },
+        { "resource": "vehicle", "action": "detail" },
+        { "resource": "vehicle", "action": "new" },
+        { "resource": "vehicle", "action": "edit" },
+        { "resource": "vehicle", "action": "edit-own" },
+        { "resource": "vehicle", "action": "delete" },
+        { "resource": "vehicle", "action": "delete-own" },
+        { "resource": "trailer", "action": "find" },
+        { "resource": "trailer", "action": "new" },
+        { "resource": "trailer", "action": "detail" },
+        { "resource": "trailer", "action": "edit" },
+        { "resource": "trailer", "action": "edit-own" },
+        { "resource": "trailer", "action": "delete" },
+        { "resource": "trailer", "action": "delete-own" },
+        { "resource": "maintenance", "action": "find" },
+        { "resource": "maintenance", "action": "detail" },
+        { "resource": "maintenance", "action": "edit" },
+        { "resource": "maintenance", "action": "edit-own" },
+        { "resource": "driver", "action": "find" },
+        { "resource": "driver", "action": "detail" },
+        { "resource": "driver", "action": "edit" },
+        { "resource": "driver", "action": "new" },
+        { "resource": "driver", "action": "edit-own" },
+        { "resource": "advance", "action": "find" },
+        { "resource": "advance", "action": "detail" },
+        { "resource": "advance", "action": "edit" },
+        { "resource": "advance", "action": "edit-own" },
+        { "resource": "advance", "action": "reject" },
+        { "resource": "advance", "action": "approve" },
+        { "resource": "organization-role", "action": "find" },
+        { "resource": "organization-role", "action": "new" },
+        { "resource": "organization-role", "action": "detail" },
+        { "resource": "organization-role", "action": "edit" },
+        { "resource": "organization-role", "action": "edit-own" },
+        { "resource": "organization-role", "action": "delete" },
+        { "resource": "organization-role", "action": "delete-own" },
+        { "resource": "organization-member", "action": "find" },
+        { "resource": "organization-member", "action": "new" },
+        { "resource": "organization-member", "action": "detail" },
+        { "resource": "organization-member", "action": "edit" },
+        { "resource": "organization-member", "action": "edit-own" },
+        { "resource": "organization-member", "action": "delete" },
+        { "resource": "organization-member", "action": "delete-own" },
+        { "resource": "organization", "action": "edit" }
+      ]
+    }
+  },
+  {
+    "type": "ORGANIZATION_ROLE",
+    "data": {
+      "type": "ACCOUNTANT",
+      "name": "Kế toán",
+      "description": "Vai trò kế toán chịu trách nhiệm về các vấn đề tài chính của doanh nghiệp, bao gồm theo dõi và báo cáo về các giao dịch tài chính.",
+      "permissions": [
+        { "resource": "order", "action": "find" },
+        { "resource": "order", "action": "detail" },
+        { "resource": "order-trip", "action": "find" },
+        { "resource": "order-trip", "action": "detail" },
+        { "resource": "order-trip", "action": "edit" },
+        { "resource": "order-trip", "action": "edit-own" },
+        { "resource": "order-trip-message", "action": "find" },
+        { "resource": "order-trip-message", "action": "edit" },
+        { "resource": "order-plan", "action": "find" },
+        { "resource": "order-monitoring", "action": "find" },
+        { "resource": "vehicle-monitoring", "action": "find" },
+        { "resource": "report-statistics-customer", "action": "find" },
+        { "resource": "report-statistics-customer", "action": "detail" },
+        { "resource": "report-statistics-customer", "action": "export" },
+        { "resource": "report-statistics-subcontractor", "action": "find" },
+        { "resource": "report-statistics-subcontractor", "action": "detail" },
+        { "resource": "report-statistics-subcontractor", "action": "edit" },
+        { "resource": "report-statistics-subcontractor", "action": "export" },
+        { "resource": "report-statistics-driver", "action": "find" },
+        { "resource": "report-statistics-driver", "action": "detail" },
+        { "resource": "report-statistics-driver", "action": "edit" },
+        { "resource": "report-statistics-driver", "action": "export" },
+        { "resource": "customer", "action": "find" },
+        { "resource": "customer", "action": "detail" },
+        { "resource": "customer", "action": "edit" },
+        { "resource": "customer", "action": "new" },
+        { "resource": "customer", "action": "edit-own" },
+        { "resource": "customer", "action": "delete-own" },
+        { "resource": "customer-route", "action": "find" },
+        { "resource": "customer-route", "action": "new" },
+        { "resource": "customer-route", "action": "detail" },
+        { "resource": "customer-route", "action": "edit" },
+        { "resource": "customer-route", "action": "edit-own" },
+        { "resource": "customer-route", "action": "delete-own" },
+        { "resource": "subcontractor", "action": "find" },
+        { "resource": "subcontractor", "action": "new" },
+        { "resource": "subcontractor", "action": "detail" },
+        { "resource": "subcontractor", "action": "edit" },
+        { "resource": "subcontractor", "action": "edit-own" },
+        { "resource": "subcontractor", "action": "delete-own" },
+        { "resource": "vehicle", "action": "find" },
+        { "resource": "vehicle", "action": "detail" },
+        { "resource": "trailer", "action": "find" },
+        { "resource": "trailer", "action": "detail" },
+        { "resource": "maintenance", "action": "find" },
+        { "resource": "maintenance", "action": "detail" },
+        { "resource": "driver", "action": "find" },
+        { "resource": "driver", "action": "new" },
+        { "resource": "driver", "action": "detail" },
+        { "resource": "driver", "action": "edit" },
+        { "resource": "driver", "action": "edit-own" },
+        { "resource": "driver", "action": "delete-own" },
+        { "resource": "advance", "action": "find" },
+        { "resource": "advance", "action": "new" },
+        { "resource": "advance", "action": "detail" },
+        { "resource": "advance", "action": "edit" },
+        { "resource": "advance", "action": "edit-own" },
+        { "resource": "advance", "action": "delete-own" },
+        { "resource": "advance", "action": "pay" },
+        { "resource": "organization-report", "action": "find" },
+        { "resource": "organization-report", "action": "new" },
+        { "resource": "organization-report", "action": "detail" },
+        { "resource": "organization-report", "action": "download" },
+        { "resource": "organization-report", "action": "edit" },
+        { "resource": "organization-report", "action": "delete" },
+        { "resource": "organization", "action": "edit" }
+      ]
+    }
+  },
+  {
+    "type": "ORGANIZATION_ROLE",
+    "data": {
+      "type": "DISPATCH_MANAGER",
+      "name": "Quản lý điều xe",
+      "description": "Vai trò quản lý điều xe có trách nhiệm doanh nghiệp và điều phối các hoạt động vận chuyển. Điều hành và giám sát các tuyến đường và lịch trình vận chuyển.",
+      "permissions": [
+        { "resource": "order", "action": "find" },
+        { "resource": "order", "action": "new" },
+        { "resource": "order", "action": "detail" },
+        { "resource": "order", "action": "edit" },
+        { "resource": "order", "action": "edit-own" },
+        { "resource": "order", "action": "delete" },
+        { "resource": "order", "action": "delete-own" },
+        { "resource": "order-trip", "action": "find" },
+        { "resource": "order-trip", "action": "new" },
+        { "resource": "order-trip", "action": "detail" },
+        { "resource": "order-trip", "action": "edit" },
+        { "resource": "order-trip", "action": "edit-own" },
+        { "resource": "order-trip", "action": "delete" },
+        { "resource": "order-trip", "action": "delete-own" },
+        { "resource": "order-trip-message", "action": "find" },
+        { "resource": "order-trip-message", "action": "edit" },
+        { "resource": "order-trip-message", "action": "edit-own" },
+        { "resource": "order-trip-message", "action": "delete" },
+        { "resource": "order-trip-message", "action": "delete-own" },
+        { "resource": "order-plan", "action": "find" },
+        { "resource": "order-monitoring", "action": "find" },
+        { "resource": "vehicle-monitoring", "action": "find" },
+        { "resource": "customer", "action": "find" },
+        { "resource": "customer", "action": "new" },
+        { "resource": "customer", "action": "detail" },
+        { "resource": "customer", "action": "edit" },
+        { "resource": "customer", "action": "edit-own" },
+        { "resource": "customer", "action": "delete-own" },
+        { "resource": "customer-route", "action": "find" },
+        { "resource": "customer-route", "action": "new" },
+        { "resource": "customer-route", "action": "detail" },
+        { "resource": "customer-route", "action": "edit" },
+        { "resource": "customer-route", "action": "edit-own" },
+        { "resource": "customer-route", "action": "delete-own" },
+        { "resource": "subcontractor", "action": "find" },
+        { "resource": "subcontractor", "action": "new" },
+        { "resource": "subcontractor", "action": "detail" },
+        { "resource": "subcontractor", "action": "edit" },
+        { "resource": "subcontractor", "action": "edit-own" },
+        { "resource": "subcontractor", "action": "delete-own" },
+        { "resource": "vehicle", "action": "find" },
+        { "resource": "vehicle", "action": "new" },
+        { "resource": "vehicle", "action": "detail" },
+        { "resource": "vehicle", "action": "edit" },
+        { "resource": "vehicle", "action": "edit-own" },
+        { "resource": "vehicle", "action": "delete-own" },
+        { "resource": "trailer", "action": "find" },
+        { "resource": "trailer", "action": "new" },
+        { "resource": "trailer", "action": "detail" },
+        { "resource": "trailer", "action": "edit" },
+        { "resource": "trailer", "action": "edit-own" },
+        { "resource": "trailer", "action": "delete-own" },
+        { "resource": "maintenance", "action": "find" },
+        { "resource": "maintenance", "action": "new" },
+        { "resource": "maintenance", "action": "detail" },
+        { "resource": "maintenance", "action": "edit" },
+        { "resource": "maintenance", "action": "edit-own" },
+        { "resource": "maintenance", "action": "delete-own" },
+        { "resource": "driver", "action": "find" },
+        { "resource": "driver", "action": "new" },
+        { "resource": "driver", "action": "detail" },
+        { "resource": "driver", "action": "edit" },
+        { "resource": "driver", "action": "edit-own" },
+        { "resource": "driver", "action": "delete-own" },
+        { "resource": "advance", "action": "find" },
+        { "resource": "advance", "action": "new" },
+        { "resource": "advance", "action": "detail" },
+        { "resource": "advance", "action": "edit" },
+        { "resource": "advance", "action": "edit-own" },
+        { "resource": "advance", "action": "delete-own" },
+        { "resource": "advance", "action": "approve" },
+        { "resource": "driver-license-type", "action": "new" },
+        { "resource": "maintenance-type", "action": "new" },
+        { "resource": "merchandise-type", "action": "new" },
+        { "resource": "unit-of-measure", "action": "new" },
+        { "resource": "vehicle-type", "action": "new" },
+        { "resource": "trailer-type", "action": "new" }
+      ]
+    }
+  },
+  {
+    "type": "ORGANIZATION_ROLE",
+    "data": {
+      "type": "DISPATCHER",
+      "name": "Nhân viên điều xe",
+      "description": "Vai trò nhân viên điều xe thực hiện các nhiệm vụ cụ thể liên quan đến việc điều phối vận chuyển, bao gồm lên lịch và theo dõi các chuyến đi.",
+      "permissions": [{ "resource": "order", "action": "find" }]
+    }
+  },
+  {
+    "type": "ORGANIZATION_ROLE",
+    "data": {
+      "type": "CUSTOMER",
+      "name": "Khách hàng",
+      "description": "Vai trò khách hàng đại diện cho người sử dụng dịch vụ của doanh nghiệp. Có thể thực hiện các thao tác liên quan đến việc đặt hàng và theo dõi trạng thái đơn hàng.",
+      "permissions": []
+    }
+  },
+  {
+    "type": "ORGANIZATION_ROLE",
+    "data": {
+      "type": "DRIVER",
+      "name": "Tài xế",
+      "description": "Vai trò tài xế chịu trách nhiệm vận chuyển hàng hóa hoặc hành khách theo lịch trình và yêu cầu được giao. Thực hiện các nhiệm vụ lái xe an toàn và đúng hẹn.",
+      "permissions": []
+    }
+  },
+  {
+    "type": "DRIVER_EXPENSE",
+    "data": {
+      "key": "driverExpenseLoading",
+      "name": "Bốc xếp (nếu có)",
+      "isSystem": false,
+      "displayOrder": 1
+    }
+  },
+  {
+    "type": "DRIVER_EXPENSE",
+    "data": {
+      "key": "driverExpenseOther",
+      "name": "Phí khác (nếu có)",
+      "isSystem": false,
+      "displayOrder": 2
+    }
+  },
+  {
+    "type": "DRIVER_EXPENSE",
+    "data": {
+      "key": "driverExpenseSalary",
+      "name": "Lương chuyến",
+      "type": "DRIVER_COST",
+      "isSystem": true,
+      "displayOrder": 3
+    }
+  }
+]

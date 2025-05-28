@@ -1,0 +1,47 @@
+import { notifyAndUpdateStatusCloseToExpiry } from "@/actions/orderGroup";
+import { CLIENT_API_KEY } from "@/configs/environment";
+import { ApiNextRequest, HttpStatusCode } from "@/types/api";
+import { WarehouseNotifyRequest } from "@/types/tms-tap-warehouse";
+import { withExceptionHandler } from "@/utils/server";
+
+/**
+ * POST endpoint handler for notifying in-stock orders
+ *
+ * This function handles the following workflow:
+ * 1. Validates the client API key from request headers for authentication
+ * 2. Validates the request payload against the order group schema
+ * 3. Calls service to notify TMS web about in-stock orders and update their status
+ * 4. Returns success/error response
+ *
+ * @param request - The incoming API request containing client API key header
+ * @param requestData - The request payload containing order group data
+ * @returns API response with status code and message
+ */
+export const POST = withExceptionHandler(async (request: ApiNextRequest, requestData: WarehouseNotifyRequest) => {
+  // Extract client API key from request headers
+  const clientApiKey = request.headers.get("client-api-key");
+
+  // Validate client API key - return 401 if missing or invalid
+  if (!clientApiKey || clientApiKey !== CLIENT_API_KEY) {
+    return { status: HttpStatusCode.Unauthorized, message: "Unauthorized" };
+  }
+
+  const { organizationId } = requestData;
+
+  // Validate request payload against schema
+
+  // Return validation errors in response if validation failed
+  if (!organizationId) {
+    return { status: HttpStatusCode.BadRequest, message: "Organization ID is required" };
+  }
+
+  // Notify TMS web about close-to-expiry orders and update their status
+  const result = await notifyAndUpdateStatusCloseToExpiry(requestData);
+
+  // Return success response with updated data
+  return {
+    status: HttpStatusCode.Ok,
+    data: result,
+    message: "Close-to-expiry orders notified and status updated",
+  };
+});

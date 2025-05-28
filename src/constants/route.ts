@@ -1,0 +1,3 @@
+export const DEFAULT_ROUTE_CODE_LENGTH = 12;
+
+export const DEFAULT_ROUTE_POINT_CODE_LENGTH = 10;

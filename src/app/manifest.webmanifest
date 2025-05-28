@@ -1,0 +1,15 @@
+{
+  "name": "Phần mềm Quản lý Vận tải AUTOTMS",
+  "short_name": "AUTOTMS",
+  "start_url": "/",
+  "description": "AUTOTMS - Giải pháp quản lý vận tải toàn diện, tối ưu hóa quy trình, giảm chi phí và nâng cao hiệu suất.",
+  "categories": ["transportation", "business", "productivity"],
+  "icons": [
+    { "src": "/assets/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0070E0",
+  "background_color": "#fafafa",
+  "display": "standalone",
+  "scope": "/"
+}

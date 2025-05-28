@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "orderCode": "2002708001",
+    "deliveryCode": "8103095538",
+    "customer": {
+      "name": "KIDO",
+      "description": "TẬP ĐOÀN KIDO"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "Imarket - TKG TAEKWANG CẦN THƠ"
+    },
+    "district": "Cái Răng",
+    "province": "TP. Cần Thơ",
+    "orderDate": "10/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 150,
+    "unit": "thùng",
+    "cbm": 1.5,
+    "color": "primary",
+    "status": "Đơn hàng mới"
+  },
+  {
+    "id": 2,
+    "orderCode": "2002708002",
+    "deliveryCode": "8103095539",
+    "customer": {
+      "name": "KINHDO",
+      "description": "TẬP ĐOÀN KINH ĐÔ"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "BHX - Bach Hoa Xanh"
+    },
+    "district": "Cái Bè",
+    "province": "Tiền Giang",
+    "orderDate": "11/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 250,
+    "unit": "pallets",
+    "cbm": 2.5,
+    "color": "primary",
+    "status": "Đơn hàng mới"
+  },
+  {
+    "id": 3,
+    "orderCode": "2002708003",
+    "deliveryCode": "8103095540",
+    "customer": {
+      "name": "VINAMILK",
+      "description": "TẬP ĐOÀN VINAMILK"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "Circle K - 20 Duong Van An"
+    },
+    "district": "Cái Bè",
+    "province": "Tiền Giang",
+    "orderDate": "12/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 750,
+    "unit": "kiện",
+    "cbm": 3.5,
+    "color": "pink",
+    "status": "Đang trung chuyển"
+  },
+  {
+    "id": 4,
+    "orderCode": "2002708004",
+    "deliveryCode": "8103095541",
+    "customer": {
+      "name": "NESTLE",
+      "description": "TẬP ĐOÀN NESTLE"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "Circle K - 20 Duong Van An"
+    },
+    "district": "Tháp Mười",
+    "province": "Đồng Tháp",
+    "orderDate": "11/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 4,
+    "unit": "tấn",
+    "cbm": 4.5,
+    "color": "primary",
+    "status": "Đơn hàng mới"
+  },
+  {
+    "id": 5,
+    "orderCode": "2002708005",
+    "deliveryCode": "8103095542",
+    "customer": {
+      "name": "VINAMILK",
+      "description": "TẬP ĐOÀN VINAMILK"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "Circle K - 20 Duong Van An"
+    },
+    "district": "Cái Bè",
+    "province": "Tiền Giang",
+    "orderDate": "09/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 350,
+    "unit": "thùng",
+    "cbm": 5.5,
+    "color": "pink",
+    "status": "Đang trung chuyển"
+  },
+  {
+    "id": 6,
+    "orderCode": "2002708006",
+    "deliveryCode": "8103095543",
+    "customer": {
+      "name": "KIDO",
+      "description": "TẬP ĐOÀN KIDO"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "Circle K - 20 Duong Van An"
+    },
+    "district": "Cái Răng",
+    "province": "TP. Cần Thơ",
+    "orderDate": "10/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 350,
+    "unit": "kiện",
+    "cbm": 2.5,
+    "color": "primary",
+    "status": "Đơn hàng mới"
+  },
+  {
+    "id": 7,
+    "orderCode": "2002708007",
+    "deliveryCode": "8103095544",
+    "customer": {
+      "name": "KIDO",
+      "description": "TẬP ĐOÀN KIDO"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "711 - 1000 Nguyễn Văn Linh"
+    },
+    "district": "Cái Răng",
+    "province": "TP. Cần Thơ",
+    "orderDate": "10/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 350,
+    "unit": "thùng",
+    "cbm": 3.5,
+    "color": "purple",
+    "status": "Đang nhập kho"
+  },
+  {
+    "id": 8,
+    "orderCode": "2002708008",
+    "deliveryCode": "8103095545",
+    "customer": {
+      "name": "KIDO",
+      "description": "TẬP ĐOÀN KIDO"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "711 - 1000 Nguyễn Văn Linh"
+    },
+    "district": "Cai Lậy",
+    "province": "Tiền Giang",
+    "orderDate": "10/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 350,
+    "unit": "kg",
+    "cbm": 4.5,
+    "color": "purple",
+    "status": "Đang nhập kho"
+  },
+  {
+    "id": 9,
+    "orderCode": "2002708009",
+    "deliveryCode": "8103095546",
+    "customer": {
+      "name": "KIDO",
+      "description": "TẬP ĐOÀN KIDO"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "711 - 1000 Nguyễn Văn Linh"
+    },
+    "district": "Cái Bè",
+    "province": "Tiền Giang",
+    "orderDate": "10/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 350,
+    "unit": "kiện",
+    "cbm": 5.5,
+    "color": "primary",
+    "status": "Đơn hàng mới"
+  },
+  {
+    "id": 10,
+    "orderCode": "2002708010",
+    "deliveryCode": "8103095547",
+    "customer": {
+      "name": "KIDO",
+      "description": "TẬP ĐOÀN KIDO"
+    },
+    "route": {
+      "code": "1234567890",
+      "name": "711 - 1000 Nguyễn Văn Linh"
+    },
+    "district": "Cái Bè",
+    "province": "Tiền Giang",
+    "orderDate": "10/02/2024",
+    "deliveryDate": "12/02/2024",
+    "quantity": 350,
+    "unit": "pallets",
+    "cbm": 1.5,
+    "color": "primary",
+    "status": "Đơn hàng mới"
+  }
+]

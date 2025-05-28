@@ -1,0 +1,1 @@
+export const INTERNAL_CUSTOMER_CODE = "INTERNAL";

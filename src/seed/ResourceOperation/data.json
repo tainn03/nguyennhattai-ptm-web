@@ -1,0 +1,506 @@
+[
+  {
+    "name": "order",
+    "action": "order",
+    "description": "Đơn hàng",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" },
+      { "name": "cancel", "action": "cancel", "description": "Hủy" },
+      { "name": "share", "action": "share", "description": "Chia sẻ" },
+      { "name": "cancel_share", "action": "cancel-share", "description": "Dừng chia sẻ" }
+    ]
+  },
+  {
+    "name": "order_trip",
+    "action": "order-trip",
+    "description": "Điều xe",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new_trip", "action": "new", "description": "Điều xe" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" },
+      { "name": "share", "action": "share", "description": "Chia sẻ" },
+      { "name": "cancel_share", "action": "cancel-share", "description": "Dừng chia sẻ" }
+    ]
+  },
+  {
+    "name": "trip_driver_expense",
+    "action": "trip-driver-expense",
+    "description": "Cập nhật chi phí",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" }
+    ]
+  },
+  {
+    "name": "bill_of_lading",
+    "action": "bill-of-lading",
+    "description": "Cập nhật chứng từ",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" }
+    ]
+  },
+  {
+    "name": "order_trip_message",
+    "action": "order-trip-message",
+    "description": "Trao đổi nội bộ",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" }
+    ]
+  },
+  {
+    "name": "notification",
+    "action": "notification",
+    "description": "Thông báo",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "delete", "action": "delete", "description": "Xóa" }
+    ]
+  },
+  {
+    "name": "order_plan",
+    "action": "order-plan",
+    "description": "Kế hoạch đơn hàng",
+    "operations": [{ "name": "find", "action": "find", "description": "Tìm kiếm" }]
+  },
+  {
+    "name": "order_monitoring",
+    "action": "order-monitoring",
+    "description": "Giám sát tình trạng đơn hàng",
+    "operations": [{ "name": "find", "action": "find", "description": "Tìm kiếm" }]
+  },
+  {
+    "name": "vehicle_monitoring",
+    "action": "vehicle-monitoring",
+    "description": "Giám sát tình trạng hoạt động của xe",
+    "operations": [{ "name": "find", "action": "find", "description": "Tìm kiếm" }]
+  },
+  {
+    "name": "report_statistics_customer",
+    "action": "report-statistics-customer",
+    "description": "Bảng kê khách hàng",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "export", "action": "export", "description": "Xuất báo cáo" }
+    ]
+  },
+  {
+    "name": "report_statistics_subcontractor",
+    "action": "report-statistics-subcontractor",
+    "description": "Bảng kê nhà thầu phụ",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "export", "action": "export", "description": "Xuất báo cáo" }
+    ]
+  },
+  {
+    "name": "report_statistics_driver",
+    "action": "report-statistics-driver",
+    "description": "Bảng kê tài xế",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "export", "action": "export", "description": "Xuất báo cáo" }
+    ]
+  },
+  {
+    "name": "order_codes",
+    "action": "order-codes",
+    "description": "Mã đơn hàng",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" }
+    ]
+  },
+  {
+    "name": "reminder",
+    "action": "reminder",
+    "description": "Nhắc nhở",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" }
+    ]
+  },
+  {
+    "name": "report_statistics_fuel_log",
+    "action": "report-statistics-fuel-log",
+    "description": "Lịch sử đổ xăng dầu",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" },
+      { "name": "approve", "action": "approve", "description": "Xác nhận" },
+      { "name": "export", "action": "export", "description": "Xuất báo cáo" }
+    ]
+  },
+  {
+    "name": "customer",
+    "action": "customer",
+    "description": "Khách hàng",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "customer_group",
+    "action": "customer-group",
+    "description": "Nhóm khách hàng",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "customer_route",
+    "action": "customer-route",
+    "description": "Tuyến xe",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "subcontractor",
+    "action": "subcontractor",
+    "description": "Nhà thầu phụ",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "vehicle",
+    "action": "vehicle",
+    "description": "Xe",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "vehicle_group",
+    "action": "vehicle-group",
+    "description": "Nhóm xe",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "trailer",
+    "action": "trailer",
+    "description": "Rơ-mooc",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "maintenance",
+    "action": "maintenance",
+    "description": "Bảo trì",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "driver",
+    "action": "driver",
+    "description": "Tài xế",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "advance",
+    "action": "advance",
+    "description": "Ứng tiền",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" },
+      { "name": "reject", "action": "reject", "description": "Từ chối" },
+      { "name": "pay", "action": "pay", "description": "Chi tiền" }
+    ]
+  },
+  {
+    "name": "organization",
+    "action": "organization",
+    "description": "Doanh nghiệp",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "delete", "action": "delete", "description": "Xóa" }
+    ]
+  },
+  {
+    "name": "organization_role",
+    "action": "organization-role",
+    "description": "Vai trò và Quyền",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "organization_member",
+    "action": "organization-member",
+    "description": "Người dùng",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "organization_report",
+    "action": "organization-report",
+    "description": "Mẫu báo cáo",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "download", "action": "download", "description": "Tải về" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "delete", "action": "delete", "description": "Xóa" }
+    ]
+  },
+  {
+    "name": "driver_license_type",
+    "action": "driver-license-type",
+    "description": "Loại bằng lái",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "driver_report",
+    "action": "driver-report",
+    "description": "Báo cáo tài xế",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "maintenance_type",
+    "action": "maintenance-type",
+    "description": "Loại bảo trì",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "merchandise_type",
+    "action": "merchandise-type",
+    "description": "Loại hàng hóa",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "unit_of_measure",
+    "action": "unit-of-measure",
+    "description": "Đơn vị tính",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "vehicle_type",
+    "action": "vehicle-type",
+    "description": "Loại xe",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "trailer_type",
+    "action": "trailer-type",
+    "description": "Loại rơ-mooc",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "custom_field",
+    "action": "custom-field",
+    "description": "Trường tùy chỉnh",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "setting_others",
+    "action": "setting-others",
+    "description": "Cài đặt khác",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" }
+    ]
+  },
+  {
+    "name": "gas_station",
+    "action": "gas-station",
+    "description": "Trạm xăng dầu",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "driver_expense",
+    "action": "driver-expense",
+    "description": "Chi phí tài xế",
+    "operations": [
+      { "name": "find", "action": "find", "description": "Tìm kiếm" },
+      { "name": "new_trip", "action": "new", "description": "Tạo mới" },
+      { "name": "detail", "action": "detail", "description": "Chi tiết" },
+      { "name": "edit", "action": "edit", "description": "Chỉnh sửa" },
+      { "name": "edit_own", "action": "edit-own", "description": "Chỉnh sửa (của mình)" },
+      { "name": "delete", "action": "delete", "description": "Xóa" },
+      { "name": "delete_own", "action": "delete-own", "description": "Xóa (của mình)" }
+    ]
+  },
+  {
+    "name": "vehicle_position_tracker",
+    "action": "vehicle-position-tracker",
+    "description": "Giám sát vị trí xe",
+    "operations": [{ "name": "find", "action": "find", "description": "Tìm kiếm" }]
+  }
+]

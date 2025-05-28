@@ -1,0 +1,115 @@
+###
+# REGISTER REPORT TEMPLATE
+# Report Type: DRIVER_SALARY
+# --------------------------
+# Local     : http://192.168.1.204:81/api/report/upload
+# Develop   : https://develop.autotms.vn/api/report/upload
+# Staging   : https://staging.autotms.vn/api/report/upload
+# Production: https://app.autotms.vn/api/report/upload
+POST http://192.168.1.204:81/api/report/upload
+Authorization: Bearer Ewr+7CU0aCdwMUPoTWW06PlcH+3wYT/YmvKHBX6ZxGs=
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="reportId"
+
+a353cf87-988a-4555-b48d-7bdb69bc5140
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="MAU-BANG-LUONG-TAI-XE.xlsx"
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+< ./templates/MAU-BANG-LUONG-TAI-XE.xlsx
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+# REGISTER REPORT TEMPLATE
+# Report Type: ACCOUNTS_RECEIVABLE
+# --------------------------
+# Local     : http://192.168.1.204:81/api/report/upload
+# Develop   : https://develop.autotms.vn/api/report/upload
+# Staging   : https://staging.autotms.vn/api/report/upload
+# Production: https://app.autotms.vn/api/report/upload
+POST http://192.168.1.204:81/api/report/upload
+Authorization: Bearer Ewr+7CU0aCdwMUPoTWW06PlcH+3wYT/YmvKHBX6ZxGs=
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="reportId"
+
+5b4ba8ca-9cbc-5930-a518-db25b67f9c90
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="MAU-BANG-KE-KHACH-HANG.xlsx"
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+< ./templates/MAU-BANG-KE-KHACH-HANG.xlsx
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+# REGISTER REPORT TEMPLATE
+# Report Type: AGGREGATE_ACCOUNTS_RECEIVABLE
+# --------------------------
+# Local     : http://192.168.1.204:81/api/report/upload
+# Develop   : https://develop.autotms.vn/api/report/upload
+# Staging   : https://staging.autotms.vn/api/report/upload
+# Production: https://app.autotms.vn/api/report/upload
+POST http://192.168.1.204:81/api/report/upload
+Authorization: Bearer Ewr+7CU0aCdwMUPoTWW06PlcH+3wYT/YmvKHBX6ZxGs=
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="reportId"
+
+3406cf55-631b-57e1-979c-0afa1eb39aee
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="MAU-TONG-HOP-CONG-NO.xlsx"
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+< ./templates/MAU-TONG-HOP-CONG-NO.xlsx
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+# REGISTER REPORT TEMPLATE
+# Report Type: SUBCONTRACTOR_COST
+# --------------------------
+# Local     : http://192.168.1.204:81/api/report/upload
+# Develop   : https://develop.autotms.vn/api/report/upload
+# Staging   : https://staging.autotms.vn/api/report/upload
+# Production: https://app.autotms.vn/api/report/upload
+POST http://192.168.1.204:81/api/report/upload
+Authorization: Bearer Ewr+7CU0aCdwMUPoTWW06PlcH+3wYT/YmvKHBX6ZxGs=
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="reportId"
+
+603cd6d7-807c-56fd-94b3-81834544c42a
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="MAU-BANG-KE-NHA-THAU-PHU.xlsx"
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+< ./templates/MAU-BANG-KE-NHA-THAU-PHU.xlsx
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+###
+# REGISTER REPORT TEMPLATE
+# Report Type: FUEL_LOGS
+# --------------------------
+# Local     : http://192.168.1.204:81/api/report/upload
+# Develop   : https://develop.autotms.vn/api/report/upload
+# Staging   : https://staging.autotms.vn/api/report/upload
+# Production: https://app.autotms.vn/api/report/upload
+POST http://192.168.1.204:81/api/report/upload
+Authorization: Bearer Ewr+7CU0aCdwMUPoTWW06PlcH+3wYT/YmvKHBX6ZxGs=
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="reportId"
+
+f4afe438-253d-47de-bddc-bf78b1e37749
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="MAU-LICH-SU-DO-XANG-DAU.xlsx"
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+< ./templates/MAU-LICH-SU-DO-XANG-DAU.xlsx
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
