@@ -3,28 +3,32 @@ import { Task } from 'server/domain/entity/task.entity';
 
 const API_BASE_URL = '/api/tasks';
 
-export const taskAdapter = {
+const getAxiosInstance = () => {
+  const token = localStorage.getItem('token');
+  return axios.create({
+    baseURL: API_BASE_URL,
+    headers: token ? { Authorization: `Bearer ${token}` } : {},
+  });
+};
+
+export const taskApi = {
   getTasks: async (): Promise<Task[]> => {
-    const { data } = await axios.get(API_BASE_URL);
+    const { data } = await getAxiosInstance().get('');
     return data;
   },
-
   getTaskById: async (id: string): Promise<Task> => {
-    const { data } = await axios.get(`${API_BASE_URL}/${id}`);
+    const { data } = await getAxiosInstance().get(`/${id}`);
     return data;
   },
-
   createTask: async (task: Partial<Task>): Promise<Task> => {
-    const { data } = await axios.post(API_BASE_URL, task);
+    const { data } = await getAxiosInstance().post('', task);
     return data;
   },
-
   updateTask: async (id: string, task: Partial<Task>): Promise<Task> => {
-    const { data } = await axios.put(`${API_BASE_URL}/${id}`, task);
+    const { data } = await getAxiosInstance().put(`/${id}`, task);
     return data;
   },
-
   deleteTask: async (id: string): Promise<void> => {
-    await axios.delete(`${API_BASE_URL}/${id}`);
-  },
+    await getAxiosInstance().delete(`/${id}`);
+  }
 };

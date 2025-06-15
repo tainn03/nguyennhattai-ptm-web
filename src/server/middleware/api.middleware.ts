@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import logger from '../config/logger';
 import { errorMiddleware } from './error.middleware';
 
-type ApiHandler = (req: NextApiRequest, res: NextApiResponse) => Promise<void>;
+export type ApiHandler = (req: NextApiRequest, res: NextApiResponse) => Promise<void>;
 
 export const apiMiddleware = (handler: ApiHandler) => {
   return errorMiddleware(async (req: NextApiRequest, res: NextApiResponse) => {

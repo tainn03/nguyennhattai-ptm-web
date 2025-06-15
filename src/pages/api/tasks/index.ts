@@ -1,21 +1,16 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { z } from 'zod';
+import type { NextApiResponse } from 'next';
 import { apiMiddleware } from '../../../server/middleware/api.middleware';
 import { TaskApplication } from 'server/application/task.application';
 import { TaskRepository } from 'server/domain/repository/task.repository';
 import { TaskStatus } from 'server/domain/entity/task.entity'; // Add this import
-import { authMiddleware } from 'server/middleware/auth.middleware';
+import { AuthenticatedRequest, authMiddleware } from 'server/middleware/auth.middleware';
+import { createTaskSchema } from 'server/controller/validator/task.validation';
 
 const taskUseCase = new TaskApplication(new TaskRepository());
 
-const createTaskSchema = z.object({
-  title: z.string().min(1),
-  desc: z.string().min(1),
-  status: z.enum(['todo', 'in_progress', 'done']),
-  deadline: z.string().datetime(),
-});
+async function handler(req: AuthenticatedRequest, res: NextApiResponse) {
+  const userId = req.user!.id;
 
-async function handler(req: NextApiRequest, res: NextApiResponse) {
   switch (req.method) {
     case 'GET':
       const tasks = await taskUseCase.getAllTasks();
@@ -29,7 +24,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         status: validatedData.status as unknown as TaskStatus,
         deadline: new Date(validatedData.deadline || Date.now()),
     };
-      const task = await taskUseCase.createTask(dataForDomain, 'user-id-placeholder'); // Replace with auth
+      const task = await taskUseCase.createTask(dataForDomain, userId);
       res.status(201).json(task);
       break;
 
