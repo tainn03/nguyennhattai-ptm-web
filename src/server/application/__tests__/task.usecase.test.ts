@@ -1,4 +1,3 @@
-
 import { TaskRepository } from 'server/domain/repository/task.repository';
 import { Database } from '../../config/database';
 import { TaskApplication } from '../task.application';
@@ -103,7 +102,7 @@ describe('TaskUseCase', () => {
     });
 
     it('should return null for non-existent task ID', async () => {
-      const task = await taskUseCase.getTaskById(`non-existent-id`);
+      const task = await taskUseCase.getTaskById('non-existent-id');
       expect(task).toBeNull();
     });
   });
@@ -143,7 +142,8 @@ describe('TaskUseCase', () => {
       const updatedData: Partial<Task> = { title: `Updated Task ${Date.now()}` };
       const userId = `user-${Date.now()}`;
 
-      await expect(taskUseCase.updateTask(`non-existent-id`, updatedData, userId)).rejects.toThrow(NotFoundError);
+      await expect(taskUseCase.updateTask('non-existent-id', updatedData, userId))
+        .rejects.toThrow(NotFoundError);
     });
   });
 
@@ -168,7 +168,8 @@ describe('TaskUseCase', () => {
     });
 
     it('should throw NotFoundError for non-existent task', async () => {
-      await expect(taskUseCase.deleteTask(`non-existent-id`)).rejects.toThrow(NotFoundError);
+      await expect(taskUseCase.deleteTask('non-existent-id'))
+        .rejects.toThrow(NotFoundError);
     });
   });
 });

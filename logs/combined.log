@@ -17,3 +17,17 @@
 {"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:41:15.476Z"}
 {"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:42:25.225Z"}
 {"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:42:51.167Z"}
+{"level":"info","message":{"body":"","method":"GET","query":{},"requestId":"aj4lmhru20k","timestamp":"2025-06-15T10:21:55.325Z","url":"/api/tasks"},"timestamp":"2025-06-15T10:21:55.326Z"}
+{"level":"info","message":{"duration":9,"method":"GET","requestId":"aj4lmhru20k","status":401,"timestamp":"2025-06-15T10:21:55.334Z","url":"/api/tasks"},"timestamp":"2025-06-15T10:21:55.334Z"}
+{"level":"info","message":"\u001b[32m10:29:28.445\u001b[0m \u001b[34mINFO \u001b[0m \u001b[31m[33932]\u001b[0m \u001b[33m[api.middleware]\u001b[0m - Request: method=GET url=/api/tasks correlationId=32texl75pr3 body=\"\" query={}","timestamp":"2025-06-15T10:29:28.446Z"}
+{"level":"info","message":"\u001b[32m10:29:28.456\u001b[0m \u001b[34mINFO \u001b[0m \u001b[31m[33932]\u001b[0m \u001b[33m[api.middleware]\u001b[0m - Response: method=GET url=/api/tasks status=401 duration=11.00ms correlationId=32texl75pr3","timestamp":"2025-06-15T10:29:28.456Z"}
+{"level":"info","message":"\u001b[32m2025-06-15T10:34:36.570Z\u001b[0m \u001b[34mGET \u001b[0m \u001b[31m[/api/tasks]\u001b[0m \u001b[33m[yvb5r73jjl]\u001b[0m - Request: body=\"\" query={}","timestamp":"2025-06-15T10:34:36.571Z"}
+{"level":"info","message":"\u001b[32m10:34:36.577\u001b[0m \u001b[34mINFO \u001b[0m \u001b[31m[33932]\u001b[0m \u001b[33m[api.middleware]\u001b[0m - Response: method=GET url=/api/tasks status=401 duration=7.00ms correlationId=yvb5r73jjl","timestamp":"2025-06-15T10:34:36.578Z"}
+{"level":"info","message":"\u001b[32m2025-06-15T10:35:57.047Z\u001b[0m \u001b[34mGET \u001b[0m \u001b[31m/api/tasks\u001b[0m \u001b[33mnu86pmzczd7\u001b[0m - Request: body=\"\" query={}","timestamp":"2025-06-15T10:35:57.048Z"}
+{"level":"info","message":"\u001b[32m2025-06-15T10:35:57.054Z\u001b[0m \u001b[34mGET \u001b[0m \u001b[31m/api/tasks\u001b[0m \u001b[33mnu86pmzczd7\u001b[0m - Response: status=401 duration=7.00ms","timestamp":"2025-06-15T10:35:57.054Z"}
+{"level":"info","message":"\u001b[32m2025-06-15T10:40:07.126Z\u001b[0m \u001b[34mGET \u001b[0m \u001b[31m/api/tasks\u001b[0m \u001b[33ms1fate777vq\u001b[0m - Request: body=\"\" query={}","timestamp":"2025-06-15T10:40:07.127Z"}
+{"level":"info","message":"\u001b[32m2025-06-15T10:40:07.133Z\u001b[0m \u001b[34mGET \u001b[0m \u001b[31m/api/tasks\u001b[0m \u001b[33ms1fate777vq\u001b[0m - Response: status=401 duration=7.00ms","timestamp":"2025-06-15T10:40:07.134Z"}
+{"level":"info","message":{"body":"","correlationId":"3x9cm2v2snp","method":"GET","query":{},"timestamp":"2025-06-15T10:41:48.968Z","url":"/api/tasks"},"timestamp":"2025-06-15T10:41:48.969Z"}
+{"level":"info","message":{"correlationId":"3x9cm2v2snp","duration":8,"method":"GET","status":401,"timestamp":"2025-06-15T10:41:48.976Z","url":"/api/tasks"},"timestamp":"2025-06-15T10:41:48.976Z"}
+{"level":"info","message":{"body":"","correlationId":"swe9iqw0i3b","method":"GET","query":{},"timestamp":"2025-06-15T10:41:54.350Z","url":"/api/tasks"},"timestamp":"2025-06-15T10:41:54.350Z"}
+{"level":"info","message":{"correlationId":"swe9iqw0i3b","duration":1,"method":"GET","status":401,"timestamp":"2025-06-15T10:41:54.351Z","url":"/api/tasks"},"timestamp":"2025-06-15T10:41:54.351Z"}

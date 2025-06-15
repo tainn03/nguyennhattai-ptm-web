@@ -1,35 +1,28 @@
-import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+import { ApiHandler, apiMiddleware } from './api.middleware';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 // Extend Express Request to include 'user'
-interface AuthenticatedRequest extends Request {
-    userId?: number;
+interface AuthenticatedRequest extends NextApiRequest {
+    userId?: string;
 }
 
-export const authMiddleware = (req: AuthenticatedRequest, res: Response, next: NextFunction) => {
-    const token = req.headers.authorization?.split(' ')[1];
-    if (!token) {
-        res.status(401).json({ error: 'Unauthorized' });
-        return;
-    }
-
-    try {
-        const decoded = jwt.verify(token, 'your_jwt_secret');
-        let userId: number | undefined;
-        if (typeof decoded === 'object' && decoded !== null && 'userId' in decoded) {
-            userId = (decoded as { userId?: number }).userId;
+export const authMiddleware = (handler: ApiHandler) => {
+    return async (req: AuthenticatedRequest, res: NextApiResponse) => {
+      const token = req.headers.authorization?.split(' ')[1];
+      if (!token) {
+        return res.status(401).json({ error: 'Unauthorized' });
+      }
+      try {
+        const payload = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        let userId: string | undefined;
+        if (typeof payload === 'object' && payload !== null && 'userId' in payload) {
+          userId = (payload as jwt.JwtPayload).userId as string;
         }
-        if (!userId) {
-            res.status(401).json({ error: 'Invalid token payload' });
-            return;
-        }
-        req.userId = userId; // Attach user ID to request
-        next();
-    } catch (error: unknown) {
-        if (error instanceof jwt.JsonWebTokenError) {
-            res.status(401).json({ error: 'Invalid token' });
-            return;
-        }
-        res.status(500).json({ error: 'Internal server error' });
-    }
-};
+        req.userId = userId;
+        return apiMiddleware(handler)(req, res);
+      } catch {
+        return res.status(401).json({ error: 'Invalid token' });
+      }
+    };
+  };

@@ -41,6 +41,7 @@
     "@types/node": "^20.19.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/winston": "^2.4.4",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
     "jest": "^30.0.0",
