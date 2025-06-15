@@ -1,0 +1,19 @@
+{"level":"error","message":"Error: Access denied for user 'appuser'@'172.18.0.1' (using password: YES)","timestamp":"2025-06-15T05:32:32.022Z"}
+{"level":"error","message":"Error: Access denied for user 'appuser'@'172.18.0.1' (using password: YES)","timestamp":"2025-06-15T05:32:59.291Z"}
+{"level":"error","message":"Error: Access denied for user 'appuser'@'172.18.0.1' (using password: YES)","timestamp":"2025-06-15T05:34:28.670Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T05:35:49.467Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T05:37:20.425Z"}
+{"level":"error","message":"Error: Task not found","timestamp":"2025-06-15T05:43:07.180Z"}
+{"level":"error","message":"Error: setImmediate is not defined","timestamp":"2025-06-15T06:27:59.545Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:27:59.768Z"}
+{"level":"error","message":"Error: setImmediate is not defined","timestamp":"2025-06-15T06:30:46.989Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:30:47.234Z"}
+{"level":"error","message":"Error: setImmediate is not defined","timestamp":"2025-06-15T06:35:59.722Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:35:59.958Z"}
+{"level":"error","message":"Error: setImmediate is not defined","timestamp":"2025-06-15T06:37:06.723Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:37:06.953Z"}
+{"level":"error","message":"Error: setImmediate is not defined","timestamp":"2025-06-15T06:37:27.545Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:37:27.781Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:41:15.476Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:42:25.225Z"}
+{"level":"info","message":"Fetched all tasks","timestamp":"2025-06-15T06:42:51.167Z"}
